@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my dom</h1>
+    </header>
+    <main id="main-container">
+      <section>
+        <h1>My awsome dom</h1>
+        <ul>
+          <li>well</li>
+          <li>dom</li>
+          <li>start</li>
+        </ul>
+      </section>
+      <section class="fruit-container dg dfh">
+        <h1 id="fruit-title">fruits i like</h1>
+        <ul>
+          <li class="dfhs hgd">Apple</li>
+          <li>Banana</li>
+          <li>Carrot</li>
+        </ul>
+      </section>
+      <section id="place-container">
+        <h1>place i like</h1>
+        <ul id="places-list">
+          <li class="fav-places">coxs bazar</li>
+          <li class="fav-places">bandorban</li>
+          <li class="fav-places">kashmir</li>
+        </ul>
+      </section>
+    </main>
+    <!-- <script src="js/dom.js"></script> -->
+    <script src="js/append.js"></script>
+    <script src="js/style.js"></script>
+    <script>
+      const licol = document.getElementsByTagName("li");
+      // console.log(licol);
+      for (const li of licol) {
+        // console.log(li);
+        // console.log(li.innerText);
+      }
+      const title = (document.getElementById(
+        "fruit-title"
+      ).style.backgroundColor = "pink");
+      // console.log(title.innerText);
+      const place = document.getElementsByClassName("fav-places");
+      for (const places of place) {
+        // console.log(places.innerText);
+      }
+      const all = document.querySelectorAll(".fruit-container li");
+      for (const li of all) {
+        // console.log(li.innerText);
+      }
+      const one = document.querySelector(".fruit-container li");
+      // console.log(one.innerText);
+      const att = one.getAttribute("class");
+      // console.log(att);
+      const sec =
+        document.getElementsByClassName("fruit-container")[0].innerHTML;
+      // console.log(sec);
+    </script>
+  </body>
+</html>

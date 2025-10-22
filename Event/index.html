@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Dom doma dom dom events</h1>
+    <button onclick="console.log(7)">click me</button>
+    <input type="text" />
+    <br />
+    <button onclick="makeYellow()">make yellow</button>
+    <button onclick="makeGreen()">make green</button>
+    <button id="btn-make-blue">make blue</button>
+    <script>
+      function makeYellow() {
+        document.body.style.backgroundColor = "yellow";
+      }
+      function makeGreen() {
+        document.body.style.backgroundColor = "green";
+      }
+      const makeblue = document.getElementById("btn-make-blue");
+      makeblue.onclick = function () {
+        document.body.style.backgroundColor = "blue";
+      };
+    </script>
+    <script src="event.js"></script>
+  </body>
+</html>
