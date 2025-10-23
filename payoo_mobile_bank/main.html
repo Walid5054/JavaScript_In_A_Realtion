@@ -17,7 +17,7 @@
         <nav class="flex justify-around items-center">
           <img class="w-16" src="Payoo-MFS-Resources/assets/Group.png" alt="" />
           <div>
-            <h1 class="text-3xl font-bold">$4500</h1>
+            <h1 class="text-3xl font-bold">$<span id="amount">4500</span></h1>
             <p class="border rounded p-1.5">available balance</p>
           </div>
           <button>logout</button>
@@ -29,7 +29,10 @@
             charge is low and
           </p>
           <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-            <div class="box border p-4 text-center rounded cursor-pointer">
+            <div
+              id="add-money-box"
+              class="box border p-4 text-center rounded cursor-pointer"
+            >
               <img
                 class="w-8 mx-auto"
                 src="Payoo-MFS-Resources/assets/wallet1.png"
@@ -38,13 +41,13 @@
               <h3>Add Money</h3>
             </div>
             <!-- card-2  -->
-            <div class="box border p-4 text-center rounded">
+            <div id="cash-out" class="box border p-4 text-center rounded">
               <img
                 class="w-8 mx-auto"
                 src="Payoo-MFS-Resources/assets/wallet1.png"
                 alt=""
               />
-              <h3>Add Money</h3>
+              <h3>Cash out</h3>
             </div>
             <!-- card-3  -->
             <div class="box border p-4 text-center rounded">
@@ -83,7 +86,7 @@
               <h3></h3>
             </div>
           </div>
-          <section>
+          <section id="addMoney">
             <h2>Add money</h2>
             <div class="">
               <div class="hero-content flex-col lg:flex-row-reverse">
@@ -107,9 +110,17 @@
                         placeholder="Type your number"
                         required
                       />
+                      <label class="label">Amount</label>
+                      <input
+                        id="amount-field"
+                        type="number"
+                        class="input"
+                        placeholder="Type your amount"
+                        required
+                      />
                       <label class="label">Pin</label>
                       <input
-                        id="pin-field"
+                        id="pin"
                         type="text"
                         class="input"
                         placeholder="Type your pin"
@@ -117,7 +128,7 @@
                       />
                       <div><a class="link link-hover">Forgot password?</a></div>
                       <button
-                        id="login-btn"
+                        id="add-money"
                         class="btn btn-neutral mt-4 bg-blue-700"
                       >
                         Add Money
@@ -128,8 +139,47 @@
               </div>
             </div>
           </section>
+          <section id="cashout">
+            <h2>Cashout</h2>
+            <fieldset class="fieldset">
+              <label class="label">Account number</label>
+              <input
+                id="number-field"
+                type="number"
+                class="input"
+                placeholder="Type your number"
+                required
+              />
+              <label class="label">Amount</label>
+              <input
+                id="cashout-amount"
+                type="number"
+                class="input"
+                placeholder="Type your amount"
+                required
+              />
+              <label class="label">Pin</label>
+              <input
+                id="cashout-pin"
+                type="text"
+                class="input"
+                placeholder="Type your pin"
+                required
+              />
+              <div><a class="link link-hover">Forgot password?</a></div>
+              <button
+                id="cash-out-money"
+                class="btn btn-neutral mt-4 bg-blue-700"
+              >
+                Cash Out
+              </button>
+            </fieldset>
+          </section>
         </section>
       </header>
     </section>
+    <script src="script/add_money.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
   </body>
 </html>
