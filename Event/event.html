@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Event Handler</h1>
+    <button id="btn-update-title">Update file</button>
+    <p id="para">no name</p>
+    <input id="inu" placeholder="Your name" type="text" />
+    <button id="change-button">update</button>
+    <script>
+      document
+        .getElementById("btn-update-title")
+        .addEventListener("click", function () {
+          const title = (document.getElementById("title").innerText =
+            "Hello world");
+        });
+      document
+        .getElementById("change-button")
+        .addEventListener("click", function () {
+          const name = document.getElementById("inu");
+          upname = name.value;
+          const namePara = (document.getElementById("para").innerText = upname);
+        });
+    </script>
+  </body>
+</html>

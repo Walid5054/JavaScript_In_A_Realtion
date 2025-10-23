@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .comment {
+      border: 1px solid steelblue;
+      border-radius: 5px;
+      background-color: aquamarine;
+    }
+  </style>
+  <body>
+    <h1>My Awesome Comment box. Write whats on your mind</h1>
+    <section>
+      <h3>All comments here</h3>
+      <div id="allCom">
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+          aliquam voluptatibus ad delectus labore? Esse, veniam aut. Placeat,
+          dolorem delectus.
+        </p>
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+          aliquam voluptatibus ad delectus labore? Esse, veniam aut. Placeat,
+          dolorem delectus.
+        </p>
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+          aliquam voluptatibus ad delectus labore? Esse, veniam aut. Placeat,
+          dolorem delectus.
+        </p>
+      </div>
+
+      <textarea cols="60" rows="5" name="" id="yourcom"></textarea>
+      <button id="btn-post-comment">post</button>
+    </section>
+    <script>
+      document
+        .getElementById("btn-post-comment")
+        .addEventListener("click", function () {
+          const text = document.getElementById("yourcom");
+          const yourcomment = text.value;
+          const comAll = document.getElementById("allCom");
+          const comPara = document.createElement("p");
+          comPara.classList.add("comment");
+          comPara.innerText = yourcomment;
+          comAll.appendChild(comPara);
+          text.value = "";
+        });
+    </script>
+  </body>
+</html>

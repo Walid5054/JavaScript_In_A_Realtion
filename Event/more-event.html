@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="your name" id="user-name" />
+    <button id="btn-mouse">Micky mouse</button>
+    <script>
+      // document
+      //   .getElementById("btn-mouse")
+      //   .addEventListener("mouseenter", function () {});
+      // document
+      //   .getElementById("btn-mouse")
+      //   .addEventListener("mousemove", function () {});
+      // document
+      //   .getElementById("btn-mouse")
+      //   .addEventListener("mouseout", function () {});
+      // document
+      //   .getElementById("user-name")
+      //   .addEventListener("focus", function () {
+      //     console.log("write name");
+      //   });
+      // document
+      //   .getElementById("user-name")
+      //   .addEventListener("blur", function () {
+      //     console.log("name written");
+      //   });
+      // document
+      //   .getElementById("user-name")
+      //   .addEventListener("keydown", function (event) {
+      //     console.log("typing", event.target.value);
+      //   });
+      document
+        .getElementById("user-name")
+        .addEventListener("keyup", function (event) {
+          console.log("typing", event.target.value);
+        });
+    </script>
+  </body>
+</html>
