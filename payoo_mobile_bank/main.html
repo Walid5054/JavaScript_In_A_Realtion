@@ -41,7 +41,10 @@
               <h3>Add Money</h3>
             </div>
             <!-- card-2  -->
-            <div id="cash-out" class="box border p-4 text-center rounded">
+            <div
+              id="cash-out"
+              class="cursor-pointer box border p-4 text-center rounded"
+            >
               <img
                 class="w-8 mx-auto"
                 src="Payoo-MFS-Resources/assets/wallet1.png"
@@ -77,13 +80,16 @@
               <h3>Add Money</h3>
             </div>
             <!-- card-6  -->
-            <div class="box border p-4 text-center rounded">
+            <div
+              id="transaction-box"
+              class="box border p-4 text-center rounded"
+            >
               <img
                 class="w-8 mx-auto"
                 src="Payoo-MFS-Resources/assets/wallet1.png"
                 alt=""
               />
-              <h3></h3>
+              <h3>Transaction history</h3>
             </div>
           </div>
           <section id="addMoney">
@@ -175,11 +181,18 @@
               </button>
             </fieldset>
           </section>
+          <section id="transaction">
+            <h1 class="text-3xl font-bold text-red-400 text-center">
+              transaction history
+            </h1>
+            <div id="transactionContainer"></div>
+          </section>
         </section>
       </header>
     </section>
     <script src="script/add_money.js"></script>
     <script src="script/toggle.js"></script>
     <script src="script/cashout.js"></script>
+    <script src="script/transaction.js"></script>
   </body>
 </html>

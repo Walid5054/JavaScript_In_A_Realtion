@@ -2,18 +2,26 @@ document
   .getElementById("cash-out-money")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const amount = document.getElementById("cashout-amount").value;
-    const convertedAmount = parseFloat(amount);
-    const pinNumber = document.getElementById("cashout-pin").value;
-    const pin1 = parseInt(pinNumber);
-    const mainBalance = document.getElementById("amount").innerText;
-    const convertedMainBalance = parseFloat(mainBalance);
+    const amount = getInputbyId("cashout-amount");
+    const pinNumber = getInputbyId("cashout-pin");
+    const mainBalance = getInnerTextById("amount");
     if (amount && pinNumber) {
-      if (pin1 == 1234) {
-        const sum = convertedMainBalance - convertedAmount;
-        document.getElementById("amount").innerText = sum;
-      }
+      const sum = mainBalance - amount;
+      setInnerText("amount", sum);
     } else {
       alert("need a valid pin");
     }
   });
+function getInputbyId(id) {
+  const value = document.getElementById(id).value;
+  const convertedValue = parseFloat(value);
+  return convertedValue;
+}
+function getInnerTextById(id) {
+  const value = document.getElementById(id).innerText;
+  const convertedValue = parseFloat(value);
+  return convertedValue;
+}
+function setInnerText(id, value) {
+  document.getElementById(id).innerText = value;
+}
